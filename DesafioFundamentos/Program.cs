@@ -6,8 +6,26 @@ Console.OutputEncoding = System.Text.Encoding.UTF8;
 decimal precoInicial = 0;
 decimal precoPorHora = 0;
 
-Console.WriteLine("Seja bem vindo ao sistema de estacionamento!\n" +
-                  "Digite o preço inicial:");
+DateTime data = DateTime.Now;
+;
+string saudacao = "";
+
+if (data.Hour < 11)
+{
+    saudacao = "Bom dia!!";
+}
+else if (data.Hour > 12 && data.Hour < 18)
+{
+    saudacao = "Boa tarde!!";
+}
+else
+{
+    saudacao = "Boa noite!!";
+}
+
+Console.WriteLine(saudacao + " " + data);
+Console.WriteLine("Seja bem vindo ao POTTENCIAL PARK \nSistema de Estacionamento!\n" +
+                  "Digite o valor da tarifa inicial:");
 precoInicial = Convert.ToDecimal(Console.ReadLine());
 
 Console.WriteLine("Agora digite o preço por hora:");
