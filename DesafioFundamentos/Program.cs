@@ -7,14 +7,14 @@ decimal precoInicial = 0;
 decimal precoPorHora = 0;
 
 DateTime data = DateTime.Now;
-;
+
 string saudacao = "";
 
-if (data.Hour < 11)
+if (data.Hour < 12)
 {
     saudacao = "Bom dia!!";
 }
-else if (data.Hour > 12 && data.Hour < 18)
+else if (data.Hour > 11 && data.Hour < 18)
 {
     saudacao = "Boa tarde!!";
 }
@@ -24,8 +24,7 @@ else
 }
 
 Console.WriteLine(saudacao + " " + data);
-Console.WriteLine("Seja bem vindo ao POTTENCIAL PARK \nSistema de Estacionamento!\n" +
-                  "Digite o valor da tarifa inicial:");
+Console.WriteLine("Seja bem vindo ao Estacionamento POTTENCIAL \nSistema de Estacionamento!\n" + "Digite o valor da tarifa inicial:");
 precoInicial = Convert.ToDecimal(Console.ReadLine());
 
 Console.WriteLine("Agora digite o preço por hora:");
