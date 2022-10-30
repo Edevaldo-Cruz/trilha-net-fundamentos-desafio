@@ -67,7 +67,7 @@ namespace DesafioFundamentos.Models
                         cupom = detalhes.Cupom;
 
                         veiculos.Add(detalhes);
-                        Console.WriteLine("Veiculo regitrado com secesso!");
+                        Console.WriteLine("Veiculo regitrado com sucesso!");
                         Console.WriteLine($"Cupom numero: {cupom}");
                     }
                     else
@@ -99,8 +99,6 @@ namespace DesafioFundamentos.Models
             {
                 DateTime dataSaida;
                 TimeSpan tempoDePermanencia;
-
-
                 Console.WriteLine("Digite a data e hora da saida do veiculo: \n Ex: Somente o horario (hh:mm) quando veiculo é retido no mesmo dia ou a data e o horaio (dd/mm/aa hh:mm) quando é retido em outro dia.");
                 dataSaida = DateTime.Parse(Console.ReadLine());
 
